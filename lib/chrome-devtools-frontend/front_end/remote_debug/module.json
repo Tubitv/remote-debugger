@@ -1,0 +1,30 @@
+{
+    "extensions": [
+        {
+            "type": "view",
+            "location": "panel",
+            "id": "remote_debug",
+            "title": "RemoteDebug",
+            "order": 46,
+            "className": "RemoteDebug.RemoteDebugPanel"
+        }
+    ],
+    "dependencies": [
+        "network",
+        "platform",
+        "ui",
+        "source_frame",
+        "sdk"
+    ],
+    "scripts": [
+        "callDebugBridge.js",
+        "RemoteDebugPanel.js",
+        "RemoteDebugNetworkView.js",
+        "RemoteDebugReduxView.js"
+    ],
+    "resources": [
+        "sidebar.css",
+        "remoteDebug.css",
+        "remoteDebugNetworkView.css"
+    ]
+}

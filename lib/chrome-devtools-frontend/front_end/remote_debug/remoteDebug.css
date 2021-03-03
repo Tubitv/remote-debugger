@@ -1,0 +1,51 @@
+.toolbar-container {
+    display: flex;
+    flex: none;
+    width: 100%;
+}
+
+.toolbar-container > .toolbar {
+    background-color: var(--toolbar-bg-color);
+    border-bottom: var(--divider-border);
+    width: 100%;
+}
+
+.remote-debug-panel {
+  padding: 16px;
+}
+
+.remote-debug-panel .section + .section {
+  margin-top: 16px;
+}
+
+#overview-view {
+  padding: 16px;
+}
+#overview-view p:first-child {
+  margin-top: 0;
+}
+#overview-view h5 {
+  margin: 0;
+  font-size: 12px;
+}
+
+.experiment-item {
+    display: flex;
+    max-width: 500px; /* need to tweak this later */
+    line-height: 24px;
+    margin-bottom: 5px;
+}
+
+.experiment-item label {
+    flex: 1;
+}
+.experiment-item select {
+    flex: 1;
+}
+
+.remote-debug-tip {
+  margin-top: 1rem;
+  border-top: 1px solid lightgray;
+  padding-top: 1rem;
+  color: gray;
+}

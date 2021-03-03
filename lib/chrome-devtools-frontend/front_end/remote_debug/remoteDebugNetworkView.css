@@ -1,0 +1,17 @@
+.data-grid {
+  height: 100%;
+}
+.explanation {
+  color: gray;
+  margin: 0.5em 0;
+}
+
+.mock-map-import-export-toast.warning {
+  color: rgb(255, 116, 116);
+}
+
+.mock-map-import-export-area textarea {
+  display: block;
+  width: 100%;
+  min-height: 8em;
+}

@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+      "baseUrl": "./lib/",
+      "outDir": "./build",
+      "allowJs": true,
+      "sourceMap": true,
+      "esModuleInterop": true,
+      "allowSyntheticDefaultImports": true,
+      "target": "es5",
+      "noImplicitAny": true,
+      "typeRoots": [
+        "./node_modules/@types",
+        "./lib/typings"
+      ],
+      "noImplicitThis": true,
+      "jsx": "react"
+  },
+  "include": [
+      "./lib/**/*"
+  ]
+}

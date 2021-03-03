@@ -1,0 +1,6 @@
+scripts/
+lib/chrome-devtools-frontend/
+lib/proxy.js
+build/
+coverage/
+node_modules/

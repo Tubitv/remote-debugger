@@ -1,0 +1,43 @@
+.header, .footer {
+  text-align: center;
+  padding: 2rem;
+}
+
+.header {
+  border-bottom: 1px solid #d4d4d5;
+}
+
+.content {
+  padding: 5rem;
+}
+
+.toggle {
+  margin-bottom: 10px;
+}
+
+.inspector {
+  margin-top: 2rem;
+}
+
+.inspector iframe {
+  position: relative;
+  z-index: 9999999999;
+  overflow: scroll;
+  resize: both;
+
+  width: 100%;
+  height: 400px;
+  max-height: 800px;
+  min-width: 100px;
+  min-height: 100px;
+}
+
+.inspectorUrl {
+  /* padding: 1rem; */
+  /* line-height: 2rem; */
+  padding: 0.5rem;
+  border: 1px solid #d4d4d5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
