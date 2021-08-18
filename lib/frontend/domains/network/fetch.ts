@@ -193,19 +193,23 @@ export function init(remoteDebugger: RemoteDebugger, responseMap: ResponseMap, m
 
     const startTimestamp = Date.now();
     const result = originFetch(...args);
-    result
-      .then(response => emulator.handleResponseInPromise(response, startTimestamp))
+    // Save the clone response in the closure to handle it by ourselves and return the original response to the user.
+    let cloneResponse: Response;
+    return result
       .then(response => {
-        const cloneResponse = response.clone();
+        cloneResponse = response.clone();
+        return emulator.handleResponseInPromise(response, startTimestamp);
+      })
+      .then(response => {
         sendResponseSuccessInfo({
           remoteDebugger,
           ...necessaryIdsMap,
           requestHeadersMap,
-          response,
+          response: cloneResponse,
           responseMap,
           options,
         });
-        return cloneResponse;
+        return response;
       })
       .catch(error => {
         // https://chromedevtools.github.io/devtools-protocol/tot/Network#event-loadingFailed
@@ -219,7 +223,6 @@ export function init(remoteDebugger: RemoteDebugger, responseMap: ResponseMap, m
         // We still need to throw that error out
         throw error;
       });
-    return result;
   };
 }
 
